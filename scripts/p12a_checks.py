@@ -54,6 +54,7 @@ def long_case(c,label,reference,reference_dir):
     b.flush(c)
 
 def experiment(item,config):
+    config=Path(item.get('config',str(config)))
     label=item['label'];mode=item['mode'];tag=item['tag'];source=Path(item.get('source',str(r.r.MAIN)))
     kind=item.get('kind','plain');path=OUT/tag
     reference_dir=OUT/item.get('reference_tag','reference-'+label)

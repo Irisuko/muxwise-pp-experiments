@@ -10,7 +10,8 @@ OUT=Path('/root/workspace/muxpp_work/logs/p12a')
 
 def main():
     rows=json.loads((OUT/'comparison.json').read_text())
-    colors={'v4':'#6b7280','v5':'#d97706','r1':'#2563eb','r2':'#059669'}
+    colors={'v4':'#6b7280','v5':'#d97706','r1':'#2563eb','r3':'#059669','r4':'#8b5cf6'}
+    names={'r1':'R1 (crop only)','r3':'v5.1 (R3)','r4':'R4 (layers)'}
     fig,axes=plt.subplots(2,2,figsize=(12,8),layout='constrained')
     for r in rows:
         if r['rate']!='full' or not r['run'].endswith(('llama_pp2tp2','big_pp2tp2')):continue
@@ -19,8 +20,10 @@ def main():
         raw=[json.loads(l) for l in (OUT/r['run']/'full/ttft-requests.jsonl').open()]
         values=sorted(v['ttft'] for v in raw)
         color=colors.get(label)
-        axes[row,0].plot(values,np.arange(1,len(values)+1)/len(values),label=label,color=color)
-        bins=r['arrival_windows'];axes[row,1].plot([v['start']+30 for v in bins],[v['ttft']['p50'] for v in bins],label=label,color=color,marker='o')
+        style=dict(label=names.get(label,label),color=color,linewidth=2.5 if label=='r3' else 1.5,
+                   linestyle='--' if label in ['r1','r4'] else '-')
+        axes[row,0].plot(values,np.arange(1,len(values)+1)/len(values),**style)
+        bins=r['arrival_windows'];axes[row,1].plot([v['start']+30 for v in bins],[v['ttft']['p50'] for v in bins],marker='o',**style)
     for row,model in enumerate(['8B','24B']):
         axes[row,0].axvline(5,color='black',linestyle=':',linewidth=1)
         axes[row,0].set(xlabel='TTFT (s)',ylabel='CDF',title=f'{model} PP2 x TP2, full development trace')
