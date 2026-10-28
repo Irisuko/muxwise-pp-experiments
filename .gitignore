@@ -1,0 +1,16 @@
+# Build/JIT caches and wheels (rebuildable)
+cache/
+artifacts/*.whl
+__pycache__/
+*.pyc
+
+# Large raw data: shipped as release tarballs instead
+logs/
+archive/
+results/*_requests.jsonl
+bench/*.jsonl
+bench/selftest_results/
+
+# Runtime state
+*.pid
+*.lock

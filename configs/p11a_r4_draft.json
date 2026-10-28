@@ -1,0 +1,42 @@
+{
+  "commit": "563b32fe9b84ea7e2d4ea9bb8d5513a74e8cbb42",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "0",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ]
+  },
+  "rationale": "待R3完成后按剖析决定：准入batch恢复16384改善打包、减少CPU/READY开销；8B PP2×TP2保留整请求prefill，仅启用65536 token额度；24B PP4采用更适合四级流水的4096块/4096投影（已有R2d完整cold/serial无新增差异）；其余保留R3块大小。分区、KV/output安全预留、mem fraction不变。"
+}

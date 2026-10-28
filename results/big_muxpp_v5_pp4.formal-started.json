@@ -1,0 +1,26 @@
+{
+  "started": "2026-10-27T23:56:44.360450+00:00",
+  "command": [
+    "/root/venvs/sgl/bin/python",
+    "/root/workspace/muxpp_work/bench/bench_client.py",
+    "--trace",
+    "/root/workspace/muxpp_work/bench/big_toolagent_600_80_x7.5.jsonl",
+    "--base-url",
+    "http://127.0.0.1:30000",
+    "--label",
+    "big_muxpp_v5_pp4",
+    "--out-dir",
+    "/root/workspace/muxpp_work/results",
+    "--warmup",
+    "2",
+    "--force-close",
+    "--drain-timeout",
+    "300",
+    "--time-scale",
+    "1",
+    "--progress-interval",
+    "30"
+  ],
+  "log_dir": "/root/workspace/muxpp_work/logs/p11b/big_muxpp_v5_pp4",
+  "commit": "1dcbb285e958936113e373d4b0ff1b30f63aaed2"
+}

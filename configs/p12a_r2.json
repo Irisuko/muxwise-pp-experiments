@@ -1,0 +1,60 @@
+{
+  "commit": "638aa79412593f10d8008b117516e4f98e661e0e",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-cpu-prefill-metadata"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "llama_pp2dp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ]
+  },
+  "rationale": "P12a R2 candidate: R1 valid-row reduction plus NCCL SHM copy engine for TP2; pending GPU validation.",
+  "validated": false,
+  "environment": {
+    "llama_pp2tp2": {
+      "NCCL_SHM_USE_CUDA_MEMCPY": "1"
+    },
+    "big_pp2tp2": {
+      "NCCL_SHM_USE_CUDA_MEMCPY": "1"
+    }
+  }
+}

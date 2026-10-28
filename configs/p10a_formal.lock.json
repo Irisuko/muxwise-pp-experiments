@@ -1,0 +1,5 @@
+{
+  "task": "P10a",
+  "trace": "/root/workspace/muxpp_work/bench/big_toolagent_600_80_x7.5.jsonl",
+  "reason": "Preparation only. Formal replay requires a separate user instruction and a deliberate runner update."
+}

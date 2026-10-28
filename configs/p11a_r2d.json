@@ -1,0 +1,30 @@
+{
+  "commit": "563b32fe9b84ea7e2d4ea9bb8d5513a74e8cbb42",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096"
+    ]
+  },
+  "rationale": "R2预检最终候选：4096 CPP、无拷贝末块采样、MLP尾块补齐(沿用24B)、4096投影行补齐、追加块单次causal attention且禁自动KV拆分、4096接收缓冲；v4批数准入与分区不变。"
+}

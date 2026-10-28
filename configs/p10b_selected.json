@@ -1,0 +1,52 @@
+{
+  "big_muxpp_pp4": {
+    "mem_fraction": 0.81,
+    "flags": [
+      "--pdmux-pp-stage-local-lm-head",
+      "--pdmux-pp-compact-attention",
+      "--pdmux-prefill-mlp-pad-to-chunk",
+      "--pdmux-prefill-mlp-chunk-tokens",
+      "4096",
+      "--pdmux-config-path",
+      "/root/workspace/muxpp_work/configs/pdmux_pp_4090_big_r4.yml",
+      "--pdmux-pp-tpot-coeff",
+      "0.99"
+    ],
+    "env": {
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+      "FLASHINFER_WORKSPACE_SIZE": "134217728"
+    },
+    "kv_capacity": 181066,
+    "preflight": "/root/workspace/muxpp_work/logs/p10b/r4-preflight-pp4",
+    "development": "/root/workspace/muxpp_work/logs/p10b/r4b-dev-pp4",
+    "correctness_prefix": "r4"
+  },
+  "big_muxpp_pp2tp2": {
+    "mem_fraction": 0.82,
+    "flags": [
+      "--pdmux-pp-stage-local-lm-head",
+      "--pdmux-pp-compact-attention",
+      "--pdmux-prefill-mlp-pad-to-chunk",
+      "--pdmux-prefill-mlp-chunk-tokens",
+      "4096",
+      "--pdmux-config-path",
+      "/root/workspace/muxpp_work/configs/pdmux_pp_4090_v4.yml"
+    ],
+    "env": {
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+      "FLASHINFER_WORKSPACE_SIZE": "134217728"
+    },
+    "kv_capacity": 203111,
+    "preflight": "/root/workspace/muxpp_work/logs/p10b/r2e-preflight-pp2tp2",
+    "development": "/root/workspace/muxpp_work/logs/p10b/r2e-dev-pp2tp2",
+    "correctness_prefix": "r2e"
+  },
+  "_meta": {
+    "commit": "4c10135d2e2891d6fb262d4894f0769c86dd5751",
+    "selected_utc": "2026-10-22T13:15:46.511457+00:00",
+    "formal_replayed": false,
+    "llama_regression": "/root/workspace/muxpp_work/logs/p10b/llama-dev300",
+    "llama_nonregression_status": "NOT_ESTABLISHED",
+    "llama_assessment": "/root/workspace/muxpp_work/logs/p10b/llama-regression-assessment.json"
+  }
+}

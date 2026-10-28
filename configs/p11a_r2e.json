@@ -1,0 +1,30 @@
+{
+  "commit": "563b32fe9b84ea7e2d4ea9bb8d5513a74e8cbb42",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192"
+    ]
+  },
+  "rationale": "R2最终性能候选：8192 CPP减少块固定开销并保留<=8192整批fastpath；包含无拷贝采样、MLP尾块保留、paged causal追加attention、禁自动KV split、块预算接收buffer；保持v4批数准入和分区。4096候选有新增24BPP2 cold req19近似并列数值差异，未进入本轮性能。"
+}

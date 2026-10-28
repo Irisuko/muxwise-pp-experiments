@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/root/venvs/sgl/bin/python",
+    "/root/workspace/muxpp_work/bench/bench_client.py",
+    "--trace",
+    "/root/workspace/muxpp_work/bench/toolagent_600_240_x2.5.jsonl",
+    "--base-url",
+    "http://127.0.0.1:30000",
+    "--label",
+    "muxwise_tp4",
+    "--out-dir",
+    "/root/workspace/muxpp_work/results",
+    "--warmup",
+    "2",
+    "--force-close",
+    "--drain-timeout",
+    "300"
+  ],
+  "log_dir": "/root/workspace/muxpp_work/logs/p7a/muxwise_tp4/p7b-formal",
+  "started": "2026-10-20T09:17:19.876495+00:00"
+}

@@ -1,0 +1,1818 @@
+[
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 899.9996137702838,
+    "actual_duration_sec": 612.1732699479908,
+    "duration_sec": 612.1732699479908,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10974.175662016014,
+      "output_tokens_per_sec": 405.29701667810355,
+      "requests_per_sec": 1.2006404658315846
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 1.8974964255467057,
+        "p90": 6.334446463175118,
+        "p95": 8.069066332373762,
+        "p99": 11.583870377335698,
+        "mean": 2.841992489831383,
+        "max": 14.994120151735842
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 8.052770868875086,
+        "p90": 15.83724672198296,
+        "p95": 19.10808044336736,
+        "p99": 26.019984874632193,
+        "mean": 8.99138837548695,
+        "max": 51.32974650617689
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.01868779725745457,
+        "p90": 0.02304223596767035,
+        "p95": 0.02409307315682057,
+        "p99": 0.03018905290768364,
+        "mean": 0.01872404268278704,
+        "max": 0.08725481061264873
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.018715009093284607,
+        "p90": 0.023438637517392634,
+        "p95": 0.024670629017055027,
+        "p99": 0.02761849336326122,
+        "mean": 0.01827049532651301,
+        "max": 0.2898060865700245
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.002315369956194857,
+        "p90": 0.0039803906679139805,
+        "p95": 0.0045464398041360704,
+        "p99": 0.024518917109817264,
+        "mean": 0.0027392567168597376,
+        "max": 0.03418988361954689
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 377,
+        "total": 735,
+        "rate": 0.5129251700680272,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 608,
+        "total": 735,
+        "rate": 0.8272108843537415,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 719,
+        "total": 735,
+        "rate": 0.9782312925170068,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 729,
+        "total": 735,
+        "rate": 0.9918367346938776,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 375,
+        "total": 735,
+        "rate": 0.5102040816326531,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 376,
+        "total": 735,
+        "rate": 0.5115646258503401,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 376,
+        "total": 735,
+        "rate": 0.5115646258503401,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 603,
+        "total": 735,
+        "rate": 0.8204081632653061,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 605,
+        "total": 735,
+        "rate": 0.8231292517006803,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 605,
+        "total": 735,
+        "rate": 0.8231292517006803,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 713,
+        "total": 735,
+        "rate": 0.9700680272108844,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 715,
+        "total": 735,
+        "rate": 0.9727891156462585,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 715,
+        "total": 735,
+        "rate": 0.9727891156462585,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.1638903566627262,
+      "token_weighted_ratio": 0.056018244452260814,
+      "total": 376336
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_muxwise_tp2dp2",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_muxwise_tp2dp2_requests.jsonl",
+    "run_started_at": "2026-10-21T20:56:57.333172+00:00",
+    "run_started_unix": 1792616217.3331723,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "MuxWise",
+      "configuration": "TP2DP2",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 161473,
+        "worker1(model)": 161473
+      },
+      "mem_fraction": {
+        "worker0": 0.76,
+        "worker1": 0.76
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p9b/conv_muxwise_tp2dp2",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 484,
+      "gpu_util_mean_pct": 93.39462809917356,
+      "per_gpu": {
+        "0": {
+          "samples": 121,
+          "util_mean_pct": 92.29752066115702,
+          "memory_peak_mib": 23923.0
+        },
+        "1": {
+          "samples": 121,
+          "util_mean_pct": 92.41322314049587,
+          "memory_peak_mib": 23923.0
+        },
+        "2": {
+          "samples": 121,
+          "util_mean_pct": 94.55371900826447,
+          "memory_peak_mib": 24065.0
+        },
+        "3": {
+          "samples": 121,
+          "util_mean_pct": 94.31404958677686,
+          "memory_peak_mib": 24065.0
+        }
+      }
+    },
+    "main_slo_breakdown": {
+      "passed": 605,
+      "ttft_only": 126,
+      "tpot_only": 0,
+      "both": 0,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  },
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 900.0008726548404,
+    "actual_duration_sec": 615.3785200854763,
+    "duration_sec": 615.3785200854763,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10917.015756524705,
+      "output_tokens_per_sec": 403.18599350126345,
+      "requests_per_sec": 1.1943868302356544
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 16.257549020461738,
+        "p90": 28.551182433962822,
+        "p95": 32.03330606659874,
+        "p99": 36.00601839099079,
+        "mean": 17.06343142325122,
+        "max": 38.40035828948021
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 21.284918590448797,
+        "p90": 34.71138560809195,
+        "p95": 37.93609954891726,
+        "p99": 43.3485012642294,
+        "mean": 22.03755274022467,
+        "max": 52.084262466058135
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.014855950951974823,
+        "p90": 0.01668037904337758,
+        "p95": 0.017554693557839427,
+        "p99": 0.029089891689363965,
+        "mean": 0.015306877374822773,
+        "max": 0.08235256979241967
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.014280839823186398,
+        "p90": 0.016788980551064016,
+        "p95": 0.017580651864409446,
+        "p99": 0.019887071959674357,
+        "mean": 0.014778559974125515,
+        "max": 0.3312558615580201
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.0023548388853669167,
+        "p90": 0.00406518498062951,
+        "p95": 0.004560562688857316,
+        "p99": 0.00597469723820609,
+        "mean": 0.002444369048286206,
+        "max": 0.006384905949234465
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 10,
+        "total": 735,
+        "rate": 0.013605442176870748,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 17,
+        "total": 735,
+        "rate": 0.02312925170068027,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 132,
+        "total": 735,
+        "rate": 0.17959183673469387,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 728,
+        "total": 735,
+        "rate": 0.9904761904761905,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 10,
+        "total": 735,
+        "rate": 0.013605442176870748,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 10,
+        "total": 735,
+        "rate": 0.013605442176870748,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 10,
+        "total": 735,
+        "rate": 0.013605442176870748,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 17,
+        "total": 735,
+        "rate": 0.02312925170068027,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 17,
+        "total": 735,
+        "rate": 0.02312925170068027,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 17,
+        "total": 735,
+        "rate": 0.02312925170068027,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 130,
+        "total": 735,
+        "rate": 0.17687074829931973,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 132,
+        "total": 735,
+        "rate": 0.17959183673469387,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 132,
+        "total": 735,
+        "rate": 0.17959183673469387,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.16626688169250117,
+      "token_weighted_ratio": 0.06028611971515148,
+      "total": 405008
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_muxwise_tp4",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_muxwise_tp4_requests.jsonl",
+    "run_started_at": "2026-10-21T21:08:14.744423+00:00",
+    "run_started_unix": 1792616894.7444234,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "MuxWise",
+      "configuration": "TP4",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 475809
+      },
+      "mem_fraction": {
+        "worker0": 0.8
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p9b/conv_muxwise_tp4",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 484,
+      "gpu_util_mean_pct": 97.16115702479338,
+      "per_gpu": {
+        "0": {
+          "samples": 121,
+          "util_mean_pct": 97.5702479338843,
+          "memory_peak_mib": 24076.0
+        },
+        "1": {
+          "samples": 121,
+          "util_mean_pct": 97.14049586776859,
+          "memory_peak_mib": 24078.0
+        },
+        "2": {
+          "samples": 121,
+          "util_mean_pct": 96.92561983471074,
+          "memory_peak_mib": 24078.0
+        },
+        "3": {
+          "samples": 121,
+          "util_mean_pct": 97.00826446280992,
+          "memory_peak_mib": 24076.0
+        }
+      }
+    },
+    "main_slo_breakdown": {
+      "passed": 17,
+      "ttft_only": 714,
+      "tpot_only": 0,
+      "both": 0,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  },
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 900.0001947907731,
+    "actual_duration_sec": 620.1611642828211,
+    "duration_sec": 620.1611642828211,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10832.824412294622,
+      "output_tokens_per_sec": 400.07664828049417,
+      "requests_per_sec": 1.1851757935374476
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 0.9653612524271011,
+        "p90": 3.77197986226529,
+        "p95": 5.22205549050122,
+        "p99": 9.526780302394174,
+        "mean": 1.6864836958281342,
+        "max": 16.112718237563968
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 18.957158842124045,
+        "p90": 33.957935269363226,
+        "p95": 39.71158193256706,
+        "p99": 51.339680927358565,
+        "mean": 19.117266652964968,
+        "max": 111.12646859139204
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.053265285362070855,
+        "p90": 0.09316117649611372,
+        "p95": 0.18181280801212765,
+        "p99": 0.5524425362353239,
+        "mean": 0.07745114903195967,
+        "max": 2.839597954880446
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.03113363031297922,
+        "p90": 0.037726587429642675,
+        "p95": 0.04073182363063097,
+        "p99": 0.12161928698420502,
+        "mean": 0.05178949913397014,
+        "max": 7.266474056057632
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.0020834747701883316,
+        "p90": 0.0034082753583788874,
+        "p95": 0.0038973020389676087,
+        "p99": 0.005132397347687172,
+        "mean": 0.0023745919306875814,
+        "max": 0.03454157296567928
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 520,
+        "total": 735,
+        "rate": 0.7074829931972789,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 694,
+        "total": 735,
+        "rate": 0.9442176870748299,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 729,
+        "total": 735,
+        "rate": 0.9918367346938776,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 315,
+        "total": 735,
+        "rate": 0.42857142857142855,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 665,
+        "total": 735,
+        "rate": 0.9047619047619048,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 696,
+        "total": 735,
+        "rate": 0.9469387755102041,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 222,
+        "total": 735,
+        "rate": 0.3020408163265306,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 458,
+        "total": 735,
+        "rate": 0.6231292517006802,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 487,
+        "total": 735,
+        "rate": 0.6625850340136055,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 305,
+        "total": 735,
+        "rate": 0.41496598639455784,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 625,
+        "total": 735,
+        "rate": 0.8503401360544217,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 655,
+        "total": 735,
+        "rate": 0.891156462585034,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 313,
+        "total": 735,
+        "rate": 0.42585034013605444,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 659,
+        "total": 735,
+        "rate": 0.8965986394557823,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 690,
+        "total": 735,
+        "rate": 0.9387755102040817,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.16533824018908191,
+      "token_weighted_ratio": 0.0589905147246311,
+      "total": 396304
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_chunked_pp2dp2",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_chunked_pp2dp2_requests.jsonl",
+    "run_started_at": "2026-10-21T21:19:43.849308+00:00",
+    "run_started_unix": 1792617583.8493083,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "Chunked",
+      "configuration": "PP2DP2",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 191374,
+        "worker1(model)": 191374
+      },
+      "mem_fraction": {
+        "worker0": 0.88,
+        "worker1": 0.88
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p9b/conv_chunked_pp2dp2",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 488,
+      "gpu_util_mean_pct": 80.47540983606558,
+      "per_gpu": {
+        "0": {
+          "samples": 122,
+          "util_mean_pct": 77.23770491803279,
+          "memory_peak_mib": 22503.0
+        },
+        "1": {
+          "samples": 122,
+          "util_mean_pct": 84.24590163934427,
+          "memory_peak_mib": 21375.0
+        },
+        "2": {
+          "samples": 122,
+          "util_mean_pct": 77.22131147540983,
+          "memory_peak_mib": 22491.0
+        },
+        "3": {
+          "samples": 122,
+          "util_mean_pct": 83.19672131147541,
+          "memory_peak_mib": 21323.0
+        }
+      }
+    },
+    "main_slo_breakdown": {
+      "passed": 625,
+      "ttft_only": 40,
+      "tpot_only": 65,
+      "both": 1,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  },
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 900.0000933958218,
+    "actual_duration_sec": 616.4533843416721,
+    "duration_sec": 616.4533843416721,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10897.980562105999,
+      "output_tokens_per_sec": 402.4829878498693,
+      "requests_per_sec": 1.192304266096174
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 2.2671809531748295,
+        "p90": 8.990814359299838,
+        "p95": 11.278906387370077,
+        "p99": 16.234363759569806,
+        "mean": 3.568207632133192,
+        "max": 21.252857794053853
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 20.559791509993374,
+        "p90": 44.3759141555056,
+        "p95": 50.25785916363819,
+        "p99": 69.96793074689805,
+        "mean": 23.51325625251269,
+        "max": 134.13416098523885
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.06523371664378558,
+        "p90": 0.13063125068751666,
+        "p95": 0.2344006440668766,
+        "p99": 0.25873458913660496,
+        "mean": 0.07507212727728463,
+        "max": 0.274188751139893
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.024229004979133606,
+        "p90": 0.2496570710092783,
+        "p95": 0.265163154900074,
+        "p99": 0.2960073464736342,
+        "mean": 0.05925992172400446,
+        "max": 13.583223329856992
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.0019829506054520607,
+        "p90": 0.003321046881376333,
+        "p95": 0.003716604560611358,
+        "p99": 0.00914877237752061,
+        "mean": 0.002125674222754937,
+        "max": 0.012191963382065296
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 341,
+        "total": 735,
+        "rate": 0.4639455782312925,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 547,
+        "total": 735,
+        "rate": 0.7442176870748299,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 682,
+        "total": 735,
+        "rate": 0.927891156462585,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 257,
+        "total": 735,
+        "rate": 0.34965986394557824,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 621,
+        "total": 735,
+        "rate": 0.8448979591836735,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 678,
+        "total": 735,
+        "rate": 0.9224489795918367,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 130,
+        "total": 735,
+        "rate": 0.17687074829931973,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 275,
+        "total": 735,
+        "rate": 0.3741496598639456,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 305,
+        "total": 735,
+        "rate": 0.41496598639455784,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 211,
+        "total": 735,
+        "rate": 0.2870748299319728,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 453,
+        "total": 735,
+        "rate": 0.6163265306122448,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 497,
+        "total": 735,
+        "rate": 0.6761904761904762,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 252,
+        "total": 735,
+        "rate": 0.34285714285714286,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 575,
+        "total": 735,
+        "rate": 0.782312925170068,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 627,
+        "total": 735,
+        "rate": 0.8530612244897959,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.16551598130934578,
+      "token_weighted_ratio": 0.05972137645526702,
+      "total": 401214
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_chunked_tp2dp2",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_chunked_tp2dp2_requests.jsonl",
+    "run_started_at": "2026-10-21T21:31:19.695536+00:00",
+    "run_started_unix": 1792618279.6955364,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "Chunked",
+      "configuration": "TP2DP2",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 207118,
+        "worker1(model)": 207118
+      },
+      "mem_fraction": {
+        "worker0": 0.88,
+        "worker1": 0.88
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p9b/conv_chunked_tp2dp2",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 484,
+      "gpu_util_mean_pct": 95.27892561983471,
+      "per_gpu": {
+        "0": {
+          "samples": 121,
+          "util_mean_pct": 93.91735537190083,
+          "memory_peak_mib": 22279.0
+        },
+        "1": {
+          "samples": 121,
+          "util_mean_pct": 94.31404958677686,
+          "memory_peak_mib": 22281.0
+        },
+        "2": {
+          "samples": 121,
+          "util_mean_pct": 96.60330578512396,
+          "memory_peak_mib": 22297.0
+        },
+        "3": {
+          "samples": 121,
+          "util_mean_pct": 96.28099173553719,
+          "memory_peak_mib": 22295.0
+        }
+      }
+    },
+    "main_slo_breakdown": {
+      "passed": 453,
+      "ttft_only": 168,
+      "tpot_only": 90,
+      "both": 20,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  },
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 900.0005285441875,
+    "actual_duration_sec": 618.9487410830334,
+    "duration_sec": 618.9487410830334,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10854.044210906233,
+      "output_tokens_per_sec": 400.86033548732144,
+      "requests_per_sec": 1.1874973664441109
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 3.9145057946443558,
+        "p90": 7.746140156686307,
+        "p95": 9.197866486757992,
+        "p99": 11.565480357278139,
+        "mean": 4.3133283655431605,
+        "max": 14.915554539300501
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 15.950791908428073,
+        "p90": 28.520084778405728,
+        "p95": 32.963518243283,
+        "p99": 45.217234855145165,
+        "mean": 17.138700830330755,
+        "max": 88.41227407101542
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.04053018778758614,
+        "p90": 0.05033422969128998,
+        "p95": 0.05533888821939489,
+        "p99": 0.06382228749671154,
+        "mean": 0.04001042627036491,
+        "max": 0.07685395547499259
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.041662548668682575,
+        "p90": 0.05696790926158428,
+        "p95": 0.0610256353393197,
+        "p99": 0.07234598640352485,
+        "mean": 0.03810604054615209,
+        "max": 0.27821276243776083
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.002115631476044655,
+        "p90": 0.004039413794873781,
+        "p95": 0.004600330248474727,
+        "p99": 0.013295914009213103,
+        "mean": 0.0024427723647892797,
+        "max": 0.019009701907634735
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 124,
+        "total": 735,
+        "rate": 0.16870748299319727,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 487,
+        "total": 735,
+        "rate": 0.6625850340136055,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 714,
+        "total": 735,
+        "rate": 0.9714285714285714,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 652,
+        "total": 735,
+        "rate": 0.8870748299319728,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 97,
+        "total": 735,
+        "rate": 0.13197278911564625,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 124,
+        "total": 735,
+        "rate": 0.16870748299319727,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 124,
+        "total": 735,
+        "rate": 0.16870748299319727,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 417,
+        "total": 735,
+        "rate": 0.5673469387755102,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 484,
+        "total": 735,
+        "rate": 0.6585034013605442,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 484,
+        "total": 735,
+        "rate": 0.6585034013605442,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 632,
+        "total": 735,
+        "rate": 0.8598639455782313,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 710,
+        "total": 735,
+        "rate": 0.9659863945578231,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 710,
+        "total": 735,
+        "rate": 0.9659863945578231,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.16420145926352753,
+      "token_weighted_ratio": 0.05648266168231867,
+      "total": 379456
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_muxpp_v4_pp2tp2",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_muxpp_v4_pp2tp2_requests.jsonl",
+    "run_started_at": "2026-10-21T21:43:07.197195+00:00",
+    "run_started_unix": 1792618987.1971946,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "MuxWise-PP",
+      "configuration": "PP2×TP2 v4",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 390622
+      },
+      "mem_fraction": {
+        "worker0": 0.71
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p9b/conv_muxpp_v4_pp2tp2",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 488,
+      "gpu_util_mean_pct": 93.61680327868852,
+      "per_gpu": {
+        "0": {
+          "samples": 122,
+          "util_mean_pct": 88.05737704918033,
+          "memory_peak_mib": 24066.0
+        },
+        "1": {
+          "samples": 122,
+          "util_mean_pct": 87.13934426229508,
+          "memory_peak_mib": 24066.0
+        },
+        "2": {
+          "samples": 122,
+          "util_mean_pct": 99.69672131147541,
+          "memory_peak_mib": 23968.0
+        },
+        "3": {
+          "samples": 122,
+          "util_mean_pct": 99.57377049180327,
+          "memory_peak_mib": 23968.0
+        }
+      }
+    },
+    "main_slo_breakdown": {
+      "passed": 484,
+      "ttft_only": 247,
+      "tpot_only": 0,
+      "both": 0,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  },
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 900.0022255331278,
+    "actual_duration_sec": 621.1334179677069,
+    "duration_sec": 621.1334179677069,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10815.867904807012,
+      "output_tokens_per_sec": 399.45041246017695,
+      "requests_per_sec": 1.183320650183103
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 2.7732076831161976,
+        "p90": 5.5390963293612,
+        "p95": 6.413611840922384,
+        "p99": 7.7754032171517595,
+        "mean": 3.111417965384416,
+        "max": 10.359939551912248
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 14.975005181506276,
+        "p90": 26.848780360259116,
+        "p95": 29.153203035518526,
+        "p99": 43.45786898283287,
+        "mean": 15.889309116678477,
+        "max": 80.91887602489442
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.038909008888831795,
+        "p90": 0.051869792440398174,
+        "p95": 0.054254147756708546,
+        "p99": 0.0587970380582625,
+        "mean": 0.03992154377419759,
+        "max": 0.10608757846057415
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.035646737553179264,
+        "p90": 0.055881982855498794,
+        "p95": 0.05824042726308107,
+        "p99": 0.06385815031826482,
+        "mean": 0.03796486764308785,
+        "max": 0.20636966917663813
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.002211076207458973,
+        "p90": 0.003650102205574513,
+        "p95": 0.004043684147296744,
+        "p99": 0.02304506516083847,
+        "mean": 0.0025348634454268903,
+        "max": 0.02365538343786966
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 212,
+        "total": 735,
+        "rate": 0.28843537414965986,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 630,
+        "total": 735,
+        "rate": 0.8571428571428571,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 734,
+        "total": 735,
+        "rate": 0.998639455782313,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 638,
+        "total": 735,
+        "rate": 0.8680272108843538,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 730,
+        "total": 735,
+        "rate": 0.9931972789115646,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 171,
+        "total": 735,
+        "rate": 0.23265306122448978,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 212,
+        "total": 735,
+        "rate": 0.28843537414965986,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 212,
+        "total": 735,
+        "rate": 0.28843537414965986,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 541,
+        "total": 735,
+        "rate": 0.7360544217687075,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 627,
+        "total": 735,
+        "rate": 0.8530612244897959,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 627,
+        "total": 735,
+        "rate": 0.8530612244897959,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 637,
+        "total": 735,
+        "rate": 0.8666666666666667,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 729,
+        "total": 735,
+        "rate": 0.9918367346938776,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 730,
+        "total": 735,
+        "rate": 0.9931972789115646,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.16416200706054754,
+      "token_weighted_ratio": 0.05640883125087357,
+      "total": 378960
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_muxpp_v5_pp4",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_muxpp_v5_pp4_requests.jsonl",
+    "run_started_at": "2026-10-27T23:12:30.601084+00:00",
+    "run_started_unix": 1793142750.6010838,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "MuxWise-PP",
+      "configuration": "PP4 v5",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 359498
+      },
+      "mem_fraction": {
+        "worker0": 0.71
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p11b/conv_muxpp_v5_pp4",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 492,
+      "gpu_util_mean_pct": 95.36178861788618,
+      "per_gpu": {
+        "0": {
+          "samples": 123,
+          "util_mean_pct": 86.22764227642277,
+          "memory_peak_mib": 23844.0
+        },
+        "1": {
+          "samples": 123,
+          "util_mean_pct": 97.88617886178862,
+          "memory_peak_mib": 23540.0
+        },
+        "2": {
+          "samples": 123,
+          "util_mean_pct": 98.13821138211382,
+          "memory_peak_mib": 22020.0
+        },
+        "3": {
+          "samples": 123,
+          "util_mean_pct": 99.1951219512195,
+          "memory_peak_mib": 22572.0
+        }
+      },
+      "external_sm_peak_pct": null,
+      "exclusive_gpu_assignment": true
+    },
+    "main_slo_breakdown": {
+      "passed": 627,
+      "ttft_only": 103,
+      "tpot_only": 0,
+      "both": 1,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  },
+  {
+    "planned_requests": 735,
+    "sent_requests": 735,
+    "completed": 735,
+    "unfinished": 0,
+    "failed": 0,
+    "completed_requests": 735,
+    "unfinished_requests": 0,
+    "failed_requests": 0,
+    "unsent_requests": 0,
+    "cutoff_time": 899.9991197567433,
+    "actual_duration_sec": 618.9736592629924,
+    "duration_sec": 618.9736592629924,
+    "input_tokens": 6718097,
+    "output_tokens": 248112,
+    "observed_output_tokens_including_failures": 248112,
+    "throughput": {
+      "input_tokens_per_sec": 10853.607256889074,
+      "output_tokens_per_sec": 400.8441979508873,
+      "requests_per_sec": 1.1874495610607394
+    },
+    "latencies_sec": {
+      "ttft": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 6.323814955540001,
+        "p90": 13.241309915296734,
+        "p95": 15.229639000445601,
+        "p99": 18.29585111435502,
+        "mean": 7.07887586502447,
+        "max": 22.288288767449558
+      },
+      "e2e": {
+        "count": 735,
+        "finite_count": 735,
+        "p50": 21.573882072232664,
+        "p90": 36.169120010174815,
+        "p95": 42.39307323889806,
+        "p99": 53.04847485862666,
+        "mean": 22.118755986841812,
+        "max": 108.08786352537572
+      },
+      "tpot": {
+        "count": 731,
+        "p50": 0.04749462718133166,
+        "p90": 0.05237054280005395,
+        "p95": 0.054858268057048645,
+        "p99": 0.06158368555562841,
+        "mean": 0.045644170018883864,
+        "max": 0.08916678791865706
+      },
+      "itl": {
+        "count": 247377,
+        "p50": 0.04724146984517574,
+        "p90": 0.058419464901089665,
+        "p95": 0.06241880264133215,
+        "p99": 0.0730576258525252,
+        "mean": 0.044685705427546456,
+        "max": 0.18876016791909933
+      },
+      "send_lag": {
+        "count": 735,
+        "p50": 0.0019883919134713324,
+        "p90": 0.003771391138434411,
+        "p95": 0.004192939121276138,
+        "p99": 0.005207645455747067,
+        "mean": 0.0022673236904608065,
+        "max": 0.022273875363168827
+      }
+    },
+    "slo": {
+      "ttft_le_2s": {
+        "passed": 74,
+        "total": 735,
+        "rate": 0.10068027210884353,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_5s": {
+        "passed": 262,
+        "total": 735,
+        "rate": 0.3564625850340136,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": null
+      },
+      "ttft_le_10s": {
+        "passed": 572,
+        "total": 735,
+        "rate": 0.7782312925170068,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": null
+      },
+      "tpot_le_50ms": {
+        "passed": 551,
+        "total": 735,
+        "rate": 0.7496598639455783,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.05
+      },
+      "tpot_le_100ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.1
+      },
+      "tpot_le_200ms": {
+        "passed": 731,
+        "total": 735,
+        "rate": 0.9945578231292517,
+        "ttft_threshold_sec": null,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_2s_and_tpot_le_50ms": {
+        "passed": 49,
+        "total": 735,
+        "rate": 0.06666666666666667,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_2s_and_tpot_le_100ms": {
+        "passed": 74,
+        "total": 735,
+        "rate": 0.10068027210884353,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_2s_and_tpot_le_200ms": {
+        "passed": 74,
+        "total": 735,
+        "rate": 0.10068027210884353,
+        "ttft_threshold_sec": 2,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_5s_and_tpot_le_50ms": {
+        "passed": 201,
+        "total": 735,
+        "rate": 0.27346938775510204,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_5s_and_tpot_le_100ms": {
+        "passed": 260,
+        "total": 735,
+        "rate": 0.35374149659863946,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_5s_and_tpot_le_200ms": {
+        "passed": 260,
+        "total": 735,
+        "rate": 0.35374149659863946,
+        "ttft_threshold_sec": 5,
+        "tpot_threshold_sec": 0.2
+      },
+      "ttft_le_10s_and_tpot_le_50ms": {
+        "passed": 445,
+        "total": 735,
+        "rate": 0.6054421768707483,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.05
+      },
+      "ttft_le_10s_and_tpot_le_100ms": {
+        "passed": 568,
+        "total": 735,
+        "rate": 0.7727891156462585,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.1
+      },
+      "ttft_le_10s_and_tpot_le_200ms": {
+        "passed": 568,
+        "total": 735,
+        "rate": 0.7727891156462585,
+        "ttft_threshold_sec": 10,
+        "tpot_threshold_sec": 0.2
+      }
+    },
+    "cached_tokens": {
+      "available_requests": 735,
+      "mean_ratio": 0.16416200706054754,
+      "token_weighted_ratio": 0.05640883125087357,
+      "total": 378960
+    },
+    "metric_definitions": {
+      "time": "Seconds relative to replay origin, after warmup. cutoff_time = last actual sent_at + drain_timeout.",
+      "duration": "min(actual terminal duration, cutoff_time), including initial idle and final drain.",
+      "latencies": "TTFT/E2E: ALL planned requests. Missing first token / unsuccessful completion = +infinity, serialized as >cutoff. Linear quantiles on extended reals.",
+      "tpot": "(E2E-TTFT)/(output_tokens-1); only completed before cutoff with output_tokens>1; count reports sample size.",
+      "slo": "ALL planned requests; unfinished/failed/unsent/undefined metrics are misses, including TTFT-only SLO.",
+      "throughput": "All output tokens received in timestamped SSE chunks by cutoff, including partial/failed requests. Input counted once for each request delivering a first token by cutoff (includes cached input); neither queued input nor unobserved partial prefill is counted. Divide by duration_sec.",
+      "cache": "Completed responses with cached_tokens only; missing is null. PD decode metadata does not measure prefill cache.",
+      "itl": "Observed SSE intervals for completed requests; batched chunks do not reveal exact per-token times."
+    },
+    "schema_version": 2,
+    "drain_timeout_sec": 300.0,
+    "label": "conv_muxpp_v5_pp2tp2",
+    "base_url": "http://127.0.0.1:30000",
+    "trace": "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "request_details_file": "/root/workspace/muxpp_work/results/conv_muxpp_v5_pp2tp2_requests.jsonl",
+    "run_started_at": "2026-10-27T23:25:02.262532+00:00",
+    "run_started_unix": 1793143502.2625322,
+    "time_scale": 1.0,
+    "force_close": true,
+    "limit": null,
+    "warmup": 2,
+    "timeout_sec": 3600.0,
+    "interrupted": false,
+    "scheduled_duration_sec": 599.9975,
+    "matrix": {
+      "system": "MuxWise-PP",
+      "configuration": "PP2×TP2 v5",
+      "kv_capacity_tokens_per_instance": {
+        "worker0(model)": 390804
+      },
+      "mem_fraction": {
+        "worker0": 0.71
+      },
+      "log_dir": "/root/workspace/muxpp_work/logs/p11b/conv_muxpp_v5_pp2tp2",
+      "retrospective_cutoff": false
+    },
+    "gpu_measurement": {
+      "sampling_interval_sec": 5,
+      "window": "client measurement incl. drain, excluding warmup",
+      "samples": 488,
+      "gpu_util_mean_pct": 94.27663934426229,
+      "per_gpu": {
+        "0": {
+          "samples": 122,
+          "util_mean_pct": 90.95081967213115,
+          "memory_peak_mib": 22824.0
+        },
+        "1": {
+          "samples": 122,
+          "util_mean_pct": 87.48360655737704,
+          "memory_peak_mib": 22824.0
+        },
+        "2": {
+          "samples": 122,
+          "util_mean_pct": 99.14754098360656,
+          "memory_peak_mib": 22346.0
+        },
+        "3": {
+          "samples": 122,
+          "util_mean_pct": 99.52459016393442,
+          "memory_peak_mib": 22346.0
+        }
+      },
+      "external_sm_peak_pct": null,
+      "exclusive_gpu_assignment": true
+    },
+    "main_slo_breakdown": {
+      "passed": 260,
+      "ttft_only": 471,
+      "tpot_only": 0,
+      "both": 0,
+      "undefined_tpot": 4,
+      "not_completed": 0,
+      "unsent": 0
+    }
+  }
+]

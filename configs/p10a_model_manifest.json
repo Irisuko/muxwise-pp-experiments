@@ -1,0 +1,87 @@
+{
+  "source": "https://modelscope.cn/models/mistralai/Mistral-Small-24B-Instruct-2501",
+  "revision": "master",
+  "files": {
+    "config.json": {
+      "size": 623,
+      "sha256": "ff5f8d1747db4e16def20db719d867e74d0b764330249357351b2b44520b8001",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "generation_config.json": {
+      "size": 160,
+      "sha256": "ba3438ca12420844b39264cc665c93f8ce16232dff902837791eaf80799ca457",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00001-of-00010.safetensors": {
+      "size": 4781571736,
+      "sha256": "75a14c708eea501700a723dc74bc886cf36a1393686a3fb098ee106b160da32f",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00002-of-00010.safetensors": {
+      "size": 4781592784,
+      "sha256": "1ff40fbfd9e042b7dab3f3c9442f870a4701f53e394dda769807a160ba40f32a",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00003-of-00010.safetensors": {
+      "size": 4781592800,
+      "sha256": "4cc2d059fded71efd2947a414f32053b4ed3fa84383edf97b6d91fd9f04e4235",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00004-of-00010.safetensors": {
+      "size": 4886471600,
+      "sha256": "aa0e9acacf161c45ae0d71ca3f7e4ec9ee55dae2153398da52f81ee4f9e1b8d2",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00005-of-00010.safetensors": {
+      "size": 4781592824,
+      "sha256": "dafb696763d31a1fda58010b73ecc05c19d395da8ec2c24aa9c41da33f2230d3",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00006-of-00010.safetensors": {
+      "size": 4781592816,
+      "sha256": "d9a433b19fd4d6986660a616a0d6fc7d02d9e8c0ab3c9b98940217ee6bd4e053",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00007-of-00010.safetensors": {
+      "size": 4886471600,
+      "sha256": "5ac5c7b042491f917016c3e9635583177058f736be5fa315019b959fc3c43b63",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00008-of-00010.safetensors": {
+      "size": 4781592824,
+      "sha256": "3c460c5b957ab3ac81f03bb20c0348820225dd9b819fa4487ae733b1e696e573",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00009-of-00010.safetensors": {
+      "size": 4781592816,
+      "sha256": "304f66de1aeb55f0b4e1181885e3d15b65b485d5ce5c93b4adcdf7dd2c2d8cc5",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model-00010-of-00010.safetensors": {
+      "size": 3900777072,
+      "sha256": "c4c3bcedc02f4dd7e04c8b0fe1199f4f27de7a37790d1510a8772ffe05093543",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "model.safetensors.index.json": {
+      "size": 29894,
+      "sha256": "549a19b2c46434730f1702db9c51710a9b29cdec823017f1a2e1523552e39092",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "special_tokens_map.json": {
+      "size": 21311,
+      "sha256": "5bc5d1c106bf86895473568ef5211f3fde8415e6fdee039223d6db8ca52cbe01",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "tokenizer.json": {
+      "size": 17078037,
+      "sha256": "b76085f9923309d873994d444989f7eb6ec074b06f25b58f1e8d7b7741070949",
+      "source_file_revision": "c05df881818821c51456e2b654582ea8886d6c14"
+    },
+    "tokenizer_config.json": {
+      "size": 199695,
+      "sha256": "85090a231c4b1432c95cf62d5857777df08c0939fc698bf89b91ccc96f92400e",
+      "source_file_revision": "597ad7cfb16b9657cb64f6c81d73464b6b3762bb"
+    }
+  },
+  "tensor_count": 363
+}

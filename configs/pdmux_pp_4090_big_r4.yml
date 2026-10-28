@@ -1,0 +1,29 @@
+# P10B PP4: measured dense decode contexts and intermediate SM partitions.
+sm_group_num: 8
+manual_divisions:
+- - 104
+  - 24
+  - 1
+- - 96
+  - 32
+  - 4
+- - 88
+  - 40
+  - 8
+- - 80
+  - 48
+  - 12
+- - 72
+  - 56
+  - 16
+- - 64
+  - 64
+  - 24
+decode_bs_divisor: 24
+split_forward_token_budget: 65536
+pp_profile_decode: true
+pp_prefetch: true
+pp_async_decode: true
+pp_decode_extra_contexts:
+- 12288
+- 24576

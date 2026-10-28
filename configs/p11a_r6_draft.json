@@ -1,0 +1,42 @@
+{
+  "commit": "PENDING_R6",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384",
+      "--pdmux-pp-cpu-prefill-metadata"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-cpu-prefill-metadata"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-cpu-prefill-metadata"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-cpu-prefill-metadata"
+    ]
+  },
+  "rationale": "DRAFT: CPU序列/前缀metadata避免读回。PP2两组回到R2的8192CPP/投影+批数准入，8BPP4用R5回补门槛，24BPP4暂用R4。等完整R5后确认再冻结，不自动运行。"
+}

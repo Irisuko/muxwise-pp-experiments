@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/root/venvs/sgl/bin/python",
+    "/root/workspace/muxpp_work/bench/bench_client.py",
+    "--trace",
+    "/root/workspace/muxpp_work/bench/conversation_600_240_x2.5.jsonl",
+    "--base-url",
+    "http://127.0.0.1:30000",
+    "--label",
+    "conv_muxwise_tp2dp2",
+    "--out-dir",
+    "/root/workspace/muxpp_work/results",
+    "--warmup",
+    "2",
+    "--force-close",
+    "--drain-timeout",
+    "300",
+    "--progress-interval",
+    "30"
+  ],
+  "log_dir": "/root/workspace/muxpp_work/logs/p9b/conv_muxwise_tp2dp2",
+  "started": "2026-10-21T20:56:56.076328+00:00",
+  "commit": "f6833f24ef0587278ae799696cfe17c3ade99048"
+}

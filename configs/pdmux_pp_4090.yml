@@ -1,0 +1,11 @@
+# 4090 / PP4 Llama: eight layers per stage; ~1-2 layers per long prompt slice.
+# The implicit endpoint groups are 128/0 and 0/128.
+sm_group_num: 5
+manual_divisions:
+  - [96, 32, 1]
+  - [80, 48, 8]
+  - [64, 64, 16]
+decode_bs_divisor: 24
+split_forward_token_budget: 8192
+# Launch PP4 with --mem-fraction-static 0.65 to retain activation headroom
+# for unchunked 32k prompts. 0.8 ran out of memory in the 200-request trace.

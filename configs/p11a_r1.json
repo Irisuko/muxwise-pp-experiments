@@ -1,0 +1,22 @@
+{
+  "commit": "c690b5d0d147123109a4f7e212da7ce60a432fb6",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ]
+  },
+  "rationale": "固定4096-token块，原批数在途上限及其余v4参数保持；先评估分块本身。"
+}

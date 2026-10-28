@@ -1,0 +1,64 @@
+{
+  "commit": "1dcbb285e958936113e373d4b0ff1b30f63aaed2",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-cpu-prefill-metadata"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "llama_pp2dp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ]
+  },
+  "performance_rounds": {
+    "llama_pp4": "r5",
+    "llama_pp2tp2": "r2",
+    "big_pp2tp2": "r6",
+    "big_pp4": "r5"
+  },
+  "decisions": [
+    "8B PP4默认候选R5：标准主SLO93%，两倍吞吐503.12 tok/s；R4饱和吞吐520.55高于R5的514.26，但标准主SLO少1个百分点、两倍吞吐较低。两者相对v4三档主SLO和输出均不降；默认优先R5的标准/两倍goodput。",
+    "8B PP2×TP2候选R2存在取舍：标准主SLO73.333→84.333%，三档goodput均升；输出吞吐标准/两倍/饱和约退0.8%/2.2%/1.9%。不宣称同时提升吞吐；吞吐优先可保持v4整请求/批数准入参数（禁用CPP/token额度/投影padding/refill/CPU元数据）。",
+    "24B PP2×TP2选择R6：相对v4三档主SLO/输出吞吐均提高；标准主SLO30→43.333%，饱和输出160.60→167.54 tok/s。宽松SLO标准68.0%低于v4的69.333%及R2的80.0%，追求宽松达标率可用R2（同8192 CPP/投影、批数准入，关闭CPU元数据）；R2标准主SLO40%，饱和165.22 tok/s。宽松达标率的下降主要体现在TTFT≤10s比例（R2 82.0%→R6 70.667%），TPOT≤100ms为98.0%→97.333%。",
+    "24B PP4选择R5：标准主SLO4.0→23.333%，三档输出95.66/103.55/109.07→105.84/129.81/133.45 tok/s；R6标准主SLO17.333%、两倍126.49、饱和132.39，故该拓扑关闭CPU元数据。",
+    "8B PP2×DP2采用8192 CPP、65536 token额度、16384 refill/准入预算，不启用投影padding和CPU元数据；最终另做三档开发与两个worker的跨块冒烟，无成对v4 PP2×DP2基线。"
+  ],
+  "rationale": "按拓扑选择已完成的六轮开发实测点：8BPP4=R5，8BPP2TP2=R2（明确吞吐取舍），24BPP2TP2=R6（明确宽松SLO取舍），24BPP4=R5；8BPP2DP2固定配置附测，不继续调参。原KV/output预留不变。"
+}

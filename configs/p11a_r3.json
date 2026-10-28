@@ -1,0 +1,42 @@
+{
+  "commit": "563b32fe9b84ea7e2d4ea9bb8d5513a74e8cbb42",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "8192"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "8192"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "8192"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "8192"
+    ]
+  },
+  "rationale": "待R2完成后运行：8192 CPP，所有拓扑unfinished-token额度65536（可容纳两个31663长请求，避免PP2只容一长请求的drain bubble），准入batch预算8192减少整批末块等待；8B移除投影dummy padding，24B保留8192投影padding；分区/mem fraction/KV完整输出预留保持。"
+}

@@ -1,0 +1,9 @@
+# RTX 4090: 128 SMs, sm_89; each partition >= 4 SMs, multiple of 2.
+# Two implicit groups are (128, 0) and (0, 128).
+sm_group_num: 5
+manual_divisions:
+  - [96, 32, 1]
+  - [80, 48, 8]
+  - [64, 64, 16]
+decode_bs_divisor: 24
+split_forward_token_budget: 65536

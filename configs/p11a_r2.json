@@ -1,0 +1,22 @@
+{
+  "commit": "eb1702183ceab7ee301ec0e935f40715491af487",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ]
+  },
+  "rationale": "保持4096-token CPP与v4准入/分区；修复末块采样列表索引造成的CPU同步，保留24B原MLP尾块补齐语义。token准入与adaptive batch组合保护仅默认关闭路径。"
+}

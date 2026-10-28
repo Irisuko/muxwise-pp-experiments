@@ -1,0 +1,42 @@
+{
+  "commit": "563b32fe9b84ea7e2d4ea9bb8d5513a74e8cbb42",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "0",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384"
+    ]
+  },
+  "rationale": "R4冻结：R3的8192准入batch增加两级TP2路径CPU/READY等待并降低高负载吞吐，故所有拓扑恢复16384打包预算，保留65536未完成token额度。8B PP2×TP2关闭CPP，验证整请求+token额度的容量；24B PP4使用4096 CPP/4096投影以改善四级流水平衡（R2d此配置完整serial/cold与v4一致）；8B PP4和24B PP2×TP2仍8192 CPP。mem fraction、分区、KV/完整输出安全预留保持。"
+}

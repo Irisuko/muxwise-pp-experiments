@@ -1,0 +1,112 @@
+{
+  "chunked_tp2dp2": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/chunked_tp2dp2/mem088",
+    "reason": "FlashInfer + graph32；mixed chunk开启",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "chunked_pp2dp2": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/chunked_pp2dp2/mem088",
+    "reason": "PP不支持mixed chunk，已关闭；FlashInfer + graph32",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "chunked_tp4": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/chunked_tp4/mem088",
+    "reason": "FlashInfer + graph32；mixed chunk开启",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "chunked_pp4": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/chunked_pp4/mem088",
+    "reason": "PP不支持mixed chunk，已关闭；FlashInfer + graph32",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "chunked_tp2pp2": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/chunked_tp2pp2/mem088",
+    "reason": "PP不支持mixed chunk，已关闭；FlashInfer + graph32",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "muxwise_tp2dp2": {
+    "mem": 0.76,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/muxwise_tp2dp2/mem076",
+    "reason": "0.826/0.80长预热OOM；0.78保留缓存复查OOM；0.76通过；FlashInfer + graph32，无MLP分块",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "muxwise_tp4": {
+    "mem": 0.8,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/muxwise_tp4/mem080",
+    "reason": "0.826长预热OOM；0.80通过；FlashInfer + graph32，无MLP分块",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  },
+  "pd_1p1d_tp2": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/pd_1p1d_tp2/mem088",
+    "reason": "P由源码关闭graph，D保留graph32；Mooncake TCP",
+    "commit": "19261937a524bc67216d8b925a8ea5e50bfda0f3"
+  },
+  "pd_3p1d": {
+    "mem": 0.9,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/pd_3p1d/mem090",
+    "reason": "0.88冒烟18/1/1；0.90提高KV容量后20/0/0；P graph自动关闭",
+    "commit": "19261937a524bc67216d8b925a8ea5e50bfda0f3"
+  },
+  "pd_1p3d": {
+    "mem": 0.88,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/pd_1p3d/mem088",
+    "reason": "P由源码关闭graph，D保留graph32；Mooncake TCP",
+    "commit": "19261937a524bc67216d8b925a8ea5e50bfda0f3"
+  },
+  "muxpp_pp2dp2": {
+    "mem": 0.71,
+    "attention": "flashinfer",
+    "graph_bs": 32,
+    "no_graph": false,
+    "status": "PASS",
+    "gate": "/root/workspace/muxpp_work/logs/p7a/muxpp_pp2dp2/mem071",
+    "reason": "inflight=3，其余v3参数保持；开发300条全部完成，未调参",
+    "commit": "f91e8a18da502106a07bb67c67dbf351a933bfd9"
+  }
+}

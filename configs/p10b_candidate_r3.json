@@ -1,0 +1,38 @@
+{
+  "big_muxpp_pp4": {
+    "mem_fraction": 0.81,
+    "flags": [
+      "--pdmux-pp-stage-local-lm-head",
+      "--pdmux-pp-compact-attention",
+      "--pdmux-prefill-mlp-pad-to-chunk",
+      "--pdmux-prefill-mlp-chunk-tokens",
+      "4096",
+      "--pdmux-config-path",
+      "/root/workspace/muxpp_work/configs/pdmux_pp_4090_v4.yml",
+      "--pdmux-pp-tpot-coeff",
+      "0.9",
+      "--pdmux-pp-max-inflight-prefill",
+      "4"
+    ],
+    "env": {
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+      "FLASHINFER_WORKSPACE_SIZE": "134217728"
+    }
+  },
+  "big_muxpp_pp2tp2": {
+    "mem_fraction": 0.82,
+    "flags": [
+      "--pdmux-pp-stage-local-lm-head",
+      "--pdmux-pp-compact-attention",
+      "--pdmux-prefill-mlp-pad-to-chunk",
+      "--pdmux-prefill-mlp-chunk-tokens",
+      "4096",
+      "--pdmux-config-path",
+      "/root/workspace/muxpp_work/configs/pdmux_pp_4090_v4.yml"
+    ],
+    "env": {
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+      "FLASHINFER_WORKSPACE_SIZE": "134217728"
+    }
+  }
+}

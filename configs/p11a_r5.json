@@ -1,0 +1,50 @@
+{
+  "commit": "7e1adaecf7bf369c8c5fb9d929f9d8e52617e5e7",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "0",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "8192",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "8192",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096",
+      "--pdmux-pp-prefill-projection-pad-to",
+      "4096",
+      "--pdmux-pp-max-inflight-tokens",
+      "65536",
+      "--pdmux-pp-max-budget",
+      "16384",
+      "--pdmux-pp-token-refill-size",
+      "16384"
+    ]
+  },
+  "rationale": "R5：在R4上仅增加16384 token回补门槛（不超过当前准入budget），避免零碎credit产生小批；cap65536不放宽，KV/output预留不变。完整CPU套件与格式检查通过后冻结。"
+}

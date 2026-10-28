@@ -1,0 +1,22 @@
+{
+  "commit": "48c02faf2bd4e6544c7cbbed92247cecced86653",
+  "flags": {
+    "llama_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "llama_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "big_pp2tp2": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ],
+    "big_pp4": [
+      "--pdmux-pp-prefill-chunk-size",
+      "4096"
+    ]
+  },
+  "rationale": "R2预检修订：采样前缀视图、MLP尾块补齐、CPP追加块单次paged causal attention、按块预算接收缓冲；仍4096-token块与v4批数准入/分区配置。"
+}

@@ -1,0 +1,34 @@
+{
+  "version": "v4",
+  "selected_round": "r1",
+  "flags": [
+    "--pdmux-pp-latency-partition",
+    "--no-pdmux-pp-runnable-partition",
+    "--no-pdmux-pp-decode-aware-slices",
+    "--no-pdmux-pp-adaptive-inflight",
+    "--no-pdmux-pp-cpu-merge-tokens",
+    "--no-pdmux-pp-lazy-admission-budget"
+  ],
+  "budget": 16384,
+  "max_inflight": {
+    "pp2tp2": 3,
+    "pp4": 6,
+    "pp2dp2": 3
+  },
+  "mem_fraction_static": 0.71,
+  "config_sha256": "3bd2a392dcaae12cac690aa48de8f671de5b8cbff76769a5a388236d3aa784ae",
+  "development_gates": [
+    "logs/p9a/r1-pp2tp2-toolagent/run.json",
+    "logs/p9a/r1-pp2tp2-conversation/run.json"
+  ],
+  "formal_replayed": false,
+  "commit": "f6833f24ef0587278ae799696cfe17c3ade99048",
+  "validation_status": "PASS",
+  "validation": "logs/p9a/audit.json",
+  "cleanup": "logs/p9a/final-cleanup.json",
+  "pp4_development_gates": [
+    "logs/p9a/r1v4-pp4-toolagent/run.json",
+    "logs/p9a/r1v4-pp4-conversation/run.json"
+  ],
+  "note": "PP2 performance measured at R1; final defaults choose identical policy. Final HEAD passes correctness/stress/PP4 development and PP2DP2 smoke."
+}

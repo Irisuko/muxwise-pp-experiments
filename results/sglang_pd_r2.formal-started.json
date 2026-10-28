@@ -1,0 +1,19 @@
+{
+  "started": "2026-10-20T01:34:10.671509+00:00",
+  "command": [
+    "/root/venvs/sgl/bin/python",
+    "/root/workspace/muxpp_work/bench/bench_client.py",
+    "--trace",
+    "/root/workspace/muxpp_work/bench/toolagent_600_240_x2.5.jsonl",
+    "--base-url",
+    "http://127.0.0.1:30000",
+    "--label",
+    "sglang_pd_r2",
+    "--out-dir",
+    "/root/workspace/muxpp_work/results",
+    "--warmup",
+    "2",
+    "--force-close"
+  ],
+  "log_dir": "/root/workspace/muxpp_work/logs/p4a/sglang_pd_r2-formal"
+}
